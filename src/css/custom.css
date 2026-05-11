@@ -1,30 +1,92 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* ===== PLAYWRIGHT MASTERY CUSTOM STYLES ===== */
+
+/* Hero Section Enhancement */
+.hero--primary {
+  background: linear-gradient(135deg, #2E8B57 0%, #3CB371 50%, #66CDAA 100%) !important;
+  padding: 4rem 0 !important;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+.hero__title {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem !important;
+  max-width: 650px !important;
+  margin: 0 auto !important;
+  opacity: 0.95 !important;
+}
+
+/* Buttons */
+.button--secondary {
+  --ifm-button-background-color: white !important;
+  --ifm-button-text-color: #2E8B57 !important;
+  --ifm-button-border-color: transparent !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.button--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3) !important;
+}
+
+/* Footer Enhancement */
+.footer {
+  --ifm-footer-background-color: #1a2634 !important;
+  padding: 3rem 0 !important;
+}
+
+.footer__title {
+  color: var(--ifm-color-white) !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+}
+
+.footer__link-item:hover {
+  padding-left: 5px !important;
+  color: #66CDAA !important;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar__title {
+  font-weight: 800 !important;
+  font-size: 1.2rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Sidebar highlight */
+.theme-doc-sidebar-menu li > a {
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.theme-doc-sidebar-menu li > a:hover,
+.theme-doc-sidebar-menu li > a.menu__link--active {
+  border-left-color: #2E8B57;
+  background: linear-gradient(90deg, rgba(46,139,87,0.08), transparent);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 996px) {
+  .hero__title {
+    font-size: 2rem !important;
+  }
+  
+  .hero__subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .hero {
+    padding: 2rem 0 !important;
+  }
 }
