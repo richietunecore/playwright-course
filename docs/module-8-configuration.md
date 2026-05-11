@@ -4,6 +4,9 @@ title: Module 8 - Test Configuration
 sidebar_position: 9
 ---
 
+
+
+
 # ⚙️ Module 8 – Test Configuration
 
 The `playwright.config.js` file is the heart of your Playwright framework.
@@ -317,3 +320,14 @@ npx playwright test --debug
 | `headless` | Show or hide browser |
 | `timeout` | Test time limit |
 | `projects` | Multi-browser setup |
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

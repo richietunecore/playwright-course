@@ -4,6 +4,9 @@ title: Module 6 - Page Object Model
 sidebar_position: 7
 ---
 
+
+
+
 # 🏗️ Module 6 – Page Object Model (POM)
 
 Page Object Model is the most widely used design pattern in test automation.
@@ -245,3 +248,14 @@ Test File
 - ✅ Each page has its own class
 - ✅ Tests become clean and readable
 - ✅ Easy to maintain when UI changes
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

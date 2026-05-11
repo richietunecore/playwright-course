@@ -4,6 +4,9 @@ title: Module 3 - Writing Your First Test
 sidebar_position: 4
 ---
 
+
+
+
 # 🧪 Module 3 – Writing Your First Test
 
 In this module, we created our first custom Playwright test.
@@ -114,3 +117,14 @@ This checks if page title contains the word "Playwright".
 ---
 
 🎯 You have now written your first automation test.
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

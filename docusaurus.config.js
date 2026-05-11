@@ -58,12 +58,22 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Curriculum',
+          label: 'Course',
+        },
+        {
+          to: '/docs/practice',
+          label: 'Practice',
+          position: 'left',
+        },
+        {
+          to: '/docs/real-projects',
+          label: 'Real Projects',
+          position: 'left',
         },
         {
           type: 'doc',
           docId: 'module-10-ci-cd',
-          label: 'Deploy',
+          label: '🚀 Deploy',
           position: 'left',
         },
         {
@@ -78,55 +88,50 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Learning Path',
+          title: 'Course',
           items: [
-            { label: 'Getting Started', to: '/docs/intro' },
-            { label: 'Module 1 - Intro', to: '/docs/module-1-introduction' },
-            { label: 'Module 2 - Setup', to: '/docs/module-2-installation' },
-            { label: 'Module 3 - First Test', to: '/docs/module-3-first-test' },
-            { label: 'Module 4 - Locators', to: '/docs/module-4-locators' },
+            {
+              label: 'Introduction',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Module 1',
+              to: '/docs/module-1-introduction',
+            },
+            {
+              label: 'Module 10',
+              to: '/docs/module-10-ci-cd',
+            },
           ],
         },
         {
-          title: 'Advanced Topics',
+          title: 'Learn More',
           items: [
-            { label: 'Actions & Assertions', to: '/docs/module-5-actions-assertions' },
-            { label: 'Page Object Model', to: '/docs/module-6-page-object-model' },
-            { label: 'API Testing', to: '/docs/module-7-api-testing' },
-            { label: 'Configuration', to: '/docs/module-8-configuration' },
-            { label: 'Debugging', to: '/docs/module-9-reports-debugging' },
-            { label: 'CI/CD Integration', to: '/docs/module-10-ci-cd' },
+            {
+              label: 'Practice',
+              to: '/docs/practice',
+            },
+            {
+              label: 'Real Projects',
+              to: '/docs/real-projects',
+            },
           ],
         },
         {
           title: 'Resources',
           items: [
-            { label: 'Official Docs', href: 'https://playwright.dev/docs/intro' },
-            { label: 'Report Issue', href: 'https://github.com/richietunecore/playwright-course/issues' },
-            { label: 'Discord Community', href: 'https://discord.gg/Playwright' },
-          ],
-        },
-        {
-          title: 'Connect',
-          items: [
-            { label: 'GitHub Repository', href: 'https://github.com/richietunecore/playwright-course' },
-            { label: 'Live Course URL', href: 'https://playwright-course.vercel.app' },
+            {
+              label: 'Playwright Docs',
+              href: 'https://playwright.dev',
+            },
+            {
+              label: 'GitHub Repository',
+              href: 'https://github.com/richietunecore/playwright-course',
+            },
           ],
         },
       ],
-      
-      logo: {
-        alt: 'Playwright Mastery',
-        src: 'img/logo.svg',
-        width: 160,
-        height: 51,
-      },
-      
-      copyright: `
-        Copyright ${new Date().getFullYear()} Playwright Mastery by Richie Gulati.
-        Built with love using Docusaurus & Playwright.
-        Made for learners worldwide.
-      `,
+      copyright: `Copyright © ${new Date().getFullYear()} Playwright Course. Built with Docusaurus.`,
     },
     
     prism: {

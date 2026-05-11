@@ -90,3 +90,65 @@
     padding: 2rem 0 !important;
   }
 }
+
+/* ===== Course Module Styles ===== */
+
+.module-hero {
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e8f5e9, #f8fbff);
+  border: 1px solid #e7eaf3;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.module-chip {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: #2e8555;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.module-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.4rem;
+}
+
+.module-hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #4f566b;
+  line-height: 1.7;
+  max-width: 850px;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.module-card {
+  padding: 1.25rem;
+  border: 1px solid #e7eaf3;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.module-card h3 {
+  margin-top: 0;
+}
+
+.module-note {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #2e8555;
+  background: #f7faf8;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}

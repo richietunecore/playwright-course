@@ -4,6 +4,9 @@ title: Module 9 - Reports & Debugging
 sidebar_position: 9
 ---
 
+
+
+
 # 🧩 Module 9 – Reports & Debugging
 
 Playwright is built for **fast debugging**. From rich HTML reports to trace viewer, screenshots, videos, and the Playwright Inspector — you have everything you need to diagnose failures quickly.
@@ -114,3 +117,14 @@ Useful when the Inspector UI doesn't attach (permissions, headless quirks, CI).
 ---
 
 🎯 **Summary:** Playwright gives you a **complete debugging toolkit** — **HTML report + trace viewer + screenshots/videos + Inspector + logs** — so you can fix failures in minutes, not hours.
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

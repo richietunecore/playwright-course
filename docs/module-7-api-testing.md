@@ -4,6 +4,9 @@ title: Module 7 - API Testing
 sidebar_position: 8
 ---
 
+
+
+
 # 🔌 Module 7 – API Testing with Playwright
 
 Playwright is not just for UI testing. It has a built-in API testing engine that allows you to test REST APIs directly.
@@ -132,3 +135,14 @@ When validating API responses, we can assert various parts of the payload:
 - ✅ Playwright handles API testing natively using `{ request }`.
 - ✅ You can easily perform `GET`, `POST`, `PUT`, `DELETE` methods.
 - ✅ API testing is perfect for fast, atomic validations before UI tests run.
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

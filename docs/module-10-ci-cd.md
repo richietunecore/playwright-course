@@ -4,6 +4,9 @@ title: Module 10 - CI/CD Integration
 sidebar_position: 10
 ---
 
+
+
+
 # 🚀 Module 10 – CI/CD Integration
 
 Running tests locally is great. Running them **reliably in CI (GitHub Actions, GitLab CI, Jenkins, Azure DevOps)** is what makes automation production-ready.
@@ -157,3 +160,14 @@ module.exports = defineConfig({
 ---
 
 🎯 **Summary:** With **Module 9 (Debugging)** + **Module 10 (CI/CD)**, your course now takes learners from *local scripting → professional test automation → production CI pipelines* 🚀
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

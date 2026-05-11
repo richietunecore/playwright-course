@@ -4,6 +4,9 @@ title: Module 5 - Actions & Assertions
 sidebar_position: 6
 ---
 
+
+
+
 # ⚡ Module 5 – Actions & Assertions
 
 Actions are how we **interact** with the page.  
@@ -93,4 +96,15 @@ await page.getByLabel('Colors').selectOption(['red', 'blue']);
 await page.getByLabel('I agree').check();
 
 // Uncheck a checkbox
-await page.getByLabel('I 
+await page.getByLabel('I
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

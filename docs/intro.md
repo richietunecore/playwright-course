@@ -4,6 +4,9 @@ title: Playwright Course - Beginner to Advanced
 sidebar_position: 1
 ---
 
+
+
+
 # 🎭 Playwright Complete Course
 
 Welcome to the **Playwright Automation Testing Course**.

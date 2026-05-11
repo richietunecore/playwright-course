@@ -1,88 +1,522 @@
 ---
 id: module-2-installation
-title: Module 2 - Installing Playwright
+title: "Module 2 – Installing Playwright"
 sidebar_position: 3
+description: Set up your Playwright automation environment from scratch in under 5 minutes.
+image: https://img.shields.io/badge/Difficulty-Beginner-green?style=for-the-badge
+tags: [setup, installation, beginner, nodejs, npm]
 ---
+
+
+
 
 # 📦 Module 2 – Installing Playwright
 
-In this module, we set up a real Playwright project.
+:::info[Module Overview]
+
+| Detail | Info |
+|--------|------|
+| **Difficulty** | ![Beginner](https://img.shields.io/badge/Difficulty-Beginner-green) |
+| **Time Required** | ⏱️ 15-20 minutes |
+| **Prerequisites** | Node.js installed |
+| **Outcome** | Fully functional Playwright test project |
+
+:::
 
 ---
 
-## ✅ Step 1: Create a Project Folder
+## ✅ Learning Objectives
+
+After completing this module, you will be able to:
+
+- [ ] Create a new Playwright project structure
+- [ ] Initialize Node.js configuration
+- [ ] Install Playwright with browser support
+- [ ] Configure test settings properly
+- [ ] Run your first automated test suite
+- [ ] Understand the folder structure of a Playwright project
+
+---
+
+## 🛠️ Prerequisites Check
+
+Before starting, verify you have these tools installed:
+
+### Step 1: Verify Node.js is Installed
+
+Open your terminal and run:
 
 ```bash
+node --version
+```
+
+You should see output similar to:
+
+```
+v18.x.x or higher
+```
+
+If you don't have Node.js, download it from: **[nodejs.org](https://nodejs.org)**
+
+:::tip[Pro Tip]
+
+Use Node.js version **18 or higher** for best compatibility with latest Playwright features.
+
+:::
+
+### Step 2: Verify npm is Available
+
+```bash
+npm --version
+```
+
+Expected output:
+
+```
+9.x.x or higher
+```
+
+npm comes bundled with Node.js, so installing Node usually handles this automatically.
+
+---
+
+## 🚀 Installation Steps
+
+Follow these steps in order to set up your Playwright environment.
+
+---
+
+### 📁 Step 1: Create a Project Folder
+
+Create a dedicated directory for your automation tests:
+
+```bash
+# Create the main project directory
 mkdir playwright-tests
+
+# Navigate into it
 cd playwright-tests
 ```
 
+:::note[Why Create Separate Folders?]
+
+We keep our **course website** (Docusaurus) separate from our **test projects** (Playwright) because:
+- Clean separation of concerns
+- Easier version control (git)
+- Can host tests on different CI pipelines
+- No node_modules conflicts
+
+:::
+
 ---
 
-## ✅ Step 2: Initialize Node Project
+### 📄 Step 2: Initialize Node Project
+
+Initialize a new Node.js package:
 
 ```bash
 npm init -y
 ```
 
-This creates a `package.json` file.
+**What this does:**
+- Creates `package.json` file
+- Sets up default project metadata
+- Enables npm dependency management
+
+**Generated `package.json` looks like:**
+
+```json
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
+
+:::warning[DON'T SKIP THIS STEP]
+
+Without initializing Node, you cannot install Playwright packages or run scripts properly!
+
+:::
 
 ---
 
-## ✅ Step 3: Install Playwright
+### 🎯 Step 3: Install Playwright
+
+Install Playwright along with its dependencies:
 
 ```bash
 npm init playwright@latest
 ```
 
-### Choose:
+During installation, you'll be prompted with questions:
 
-- JavaScript
-- Default test folder
-- Install browsers → Yes
-- GitHub Actions → No
+| Prompt | Recommended Choice | Explanation |
+|--------|-------------------|-------------|
+| TypeScript or JavaScript? | **JavaScript** | Easier for beginners; this course uses JS |
+| Name of site/tests folder? | Press Enter (default: `tests`) | Standard convention |
+| Add GitHub Actions workflow? | **No** | We'll customize this later |
+| Install browsers? | **Yes** | Essential for running tests locally |
+
+```text
+Choose:
+• JavaScript
+• Default test folder
+• Install browsers → Yes
+• GitHub Actions → No
+```
+
+:::info[What Gets Installed]
+
+Playwright installs these components:
+
+1. **`@playwright/test`** – Main testing framework
+2. **Browsers:** Chromium, Firefox, WebKit
+3. **`playwright.config.js`** – Configuration file
+4. **Example test files** – To get started quickly
+5. **Trace Viewer** – Debugging tool
+
+Total space used: ~300-400 MB (includes browser binaries)
+
+:::
 
 ---
 
-## ✅ What Was Installed?
+### ⏱️ Installation Time Expectations
 
-Playwright installed:
+| Component | Time Required |
+|-----------|--------------|
+| Downloading packages | ~30 seconds |
+| Installing dependencies | ~45 seconds |
+| Downloading browser binaries | ~2-3 minutes |
+| **TOTAL** | **~4-5 minutes** |
 
-```
-playwright.config.js
-tests/
-package.json
-node_modules/
-```
+*Actual time varies based on internet speed.*
 
 ---
 
-## ✅ Run Tests
+### 🧪 Step 4: Run Example Tests (Verify Installation)
+
+Once installation completes, validate everything works:
 
 ```bash
 npx playwright test
 ```
 
+Expected successful output:
+
+```
+Running 3 tests using 3 workers
+
+  ✓ example.spec.js:4:1 › has title (619ms)
+  ✓ example.spec.js:9:1 › get started link (471ms)
+  ✓ example.spec.js:12:1 › check cta button (498ms)
+
+  3 passed (2s)
+
+To open last HTML report run:
+  npx playwright show-report
+```
+
+:::success[Test Passed!]
+🎉 Congratulations! Your Playwright environment is now ready!
+
+If you see "3 passed", your installation was successful!
+:::
+
 ---
 
-## ✅ View HTML Report
+### 👀 Step 5: Open Test Report
+
+View the beautiful HTML report generated by Playwright:
 
 ```bash
 npx playwright show-report
 ```
 
+If port 9323 is busy (common error), use:
+
+```bash
+npx playwright show-report --port=9324
+```
+
+Then visit in browser:
+
+```
+http://localhost:9324
+```
+
+**Report features you'll see:**
+- Pass/fail status with colors
+- Screenshot thumbnails per step
+- Timeline visualization
+- Network request logs
+- Console logs captured
+
 ---
 
-## ✅ What Just Happened?
+## 📂 Understanding Project Structure
 
-Playwright:
+After installation, your `playwright-tests/` folder should look like this:
 
-1. Launched a browser
-2. Opened a sample website
-3. Performed actions
-4. Validated results
-5. Generated a report
+```
+playwright-tests/
+│
+├── node_modules/           ← Dependencies (don't edit manually)
+│   └── @playwright/
+│       └── test/
+│
+├── tests/                  ← Your test files go here ✏️
+│   └── example.spec.js    ← Sample test (can delete later)
+│
+├── playwright.config.js    ← Configuration settings ⚙️
+│
+├── package.json            ← Project metadata & scripts
+├── package-lock.json       ← Exact dependency versions
+│
+└── playwright-report/      ← Auto-generated reports 📊
+```
 
 ---
 
-🎯 You now have a fully working automation framework.
+## ⚙️ Quick Config Overview
+
+Your default `playwright.config.js` includes:
+
+| Setting | Value | Purpose |
+|---------|-------|---------|
+| `testDir` | `'./tests'` | Where to find test files |
+| `fullyParallel` | `true` | Run tests simultaneously |
+| `retries` | `0` locally / `2` on CI | Retry failed tests |
+| `reporter` | `'html'` | Generate HTML report |
+| `projects` | `[chromium, firefox, webkit]` | Browser targets |
+
+---
+
+## 🔧 Common Installation Issues & Fixes
+
+### Issue 1: Port Already in Use
+
+**Error message:**
+```
+Error: listen EADDRINUSE: address already in use ::1:9323
+```
+
+**Solution:**
+```bash
+# Use a different port
+npx playwright show-report --port=9325
+```
+
+Or kill existing process:
+```bash
+lsof -i :9323 | grep LISTEN
+kill -9 <PID>
+```
+
+---
+
+### Issue 2: Permission Denied (Mac/Linux)
+
+**Error message:**
+```
+EACCES: permission denied, mkdir '/usr/local/lib/node_modules'
+```
+
+**Solution:**
+```bash
+# Use npx instead of global install
+npx playwright test
+
+# Or fix permissions
+sudo chown -R $(whoami) ~/.npm
+sudo chown -R $(whoami) /usr/local/lib/node_modules
+```
+
+---
+
+### Issue 3: Old Node Version
+
+**Error message:**
+```
+Playwright requires Node.js >= 14
+```
+
+**Solution:** Upgrade Node.js:
+- Download latest LTS from **nodejs.org**
+- Or use version manager: `nvm install --lts`
+
+---
+
+### Issue 4: Tests Not Found
+
+**Error message:**
+```
+No tests found.
+```
+
+**Common causes:**
+1. Running command from wrong directory
+2. Test files not in `tests/` folder
+3. File extension mismatch (.spec.js vs .test.js)
+
+**Fix:**
+```bash
+cd playwright-tests          # Always run from here!
+npx playwright test --list    # Check what tests are found
+```
+
+---
+
+## 📊 Installation Checklist
+
+Before proceeding to Module 3, confirm each item:
+
+### Environment Setup ✅
+
+| Item | Status |
+|------|--------|
+| Node.js v18+ installed | ☐ |
+| npm available via terminal | ☐ |
+| Project folder created | ☐ |
+| `package.json` initialized | ☐ |
+| Playwright installed successfully | ☐ |
+| Browsers downloaded (Chromium/Firefox/WebKit) | ☐ |
+
+### Validation Tests ✅
+
+| Item | Status |
+|------|--------|
+| Ran `npx playwright test` | ☐ |
+| Saw passing tests ("X passed") | ☐ |
+| Opened HTML report (`show-report`) | ☐ |
+| Report loaded in browser correctly | ☐ |
+
+### Configuration Verified ✅
+
+| Item | Status |
+|------|--------|
+| Checked `playwright.config.js` exists | ☐ |
+| Understand `testDir: './tests'` location | ☐ |
+| Know how to run single test file | ☐ |
+
+---
+
+## 🎓 Key Takeaways from This Module
+
+> **TL;DR – What You Need to Remember:**
+
+1. **Always run commands from inside `playwright-tests/` folder**, not the parent directory
+2. **`npm init -y` → `npm init playwright@latest`** = standard setup sequence
+3. **Choose JavaScript** (not TypeScript) if following this exact course
+4. **Install browsers during setup** (unless using CI docker images)
+5. **Verify installation** by running: `npx playwright test`
+6. **Check reports** with: `npx playwright show-report`
+
+---
+
+## 🔗 Quick Navigation
+
+**Previous Module:**
+← [Module 1 – Introduction to Playwright](module-1-introduction)
+
+**Up Next:**
+→ [Module 3 – Writing Your First Test](module-3-first-test)
+
+---
+
+## ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>Q: Can I use Yarn instead of npm?</strong></summary>
+
+Yes! Replace all `npm` commands with `yarn`:
+
+```bash
+yarn init
+yarn create @playwright/latest
+yarn add @playwright/test
+yarn playwright test
+```
+
+Both work perfectly with Playwright.
+
+</details>
+
+<details>
+<summary><strong>Q: Do I need to install all 3 browsers?</strong></summary>
+
+Not necessarily. For this beginner course, **Chromium is sufficient**.
+
+You can limit to Chromium-only config:
+
+```javascript
+// playwright.config.js
+projects: [
+  { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+],
+```
+
+Saves ~200MB disk space.
+
+</details>
+
+<details>
+<summary><strong>Q: How much disk space does Playwright need?</strong></summary>
+
+Approximate sizes:
+
+| Component | Size |
+|-----------|------|
+| Playwright npm package | ~15 MB |
+| Chromium binary | ~150 MB |
+| Firefox binary | ~80 MB |
+| WebKit binary | ~70 MB |
+| **Total** | **~315 MB** |
+
+</details>
+
+<details>
+<summary><strong>Q: Should I commit node_modules to Git?</strong></summary>
+
+**NO!** Add `node_modules/` to `.gitignore`.
+
+Team members/can install dependencies themselves via:
+
+```bash
+npm ci  # Install exact versions from lockfile
+```
+
+</details>
+
+---
+
+## 🚨 Module Completion Badge
+
+:::success[✅ MODULE 2 COMPLETE!]
+
+You've successfully installed Playwright and can now:
+
+- ✅ Create Playwright projects from scratch
+- ✅ Initialize proper project structure  
+- ✅ Run automated browser tests
+- ✅ View detailed HTML test reports
+
+**Ready for Module 3: Writing Your First Custom Test!** →
+
+:::
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

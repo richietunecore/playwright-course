@@ -4,6 +4,9 @@ title: Module 1 - Introduction to Playwright
 sidebar_position: 2
 ---
 
+
+
+
 # 📘 Module 1 – Introduction to Playwright
 
 ---
@@ -83,3 +86,14 @@ In this course, we use:
 ## 🎯 End of Module 1
 
 Next, we will install Playwright and set up our first test project.
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+

@@ -4,6 +4,9 @@ title: Module 4 - Locators & Selectors
 sidebar_position: 5
 ---
 
+
+
+
 # 🎯 Module 4 – Locators & Selectors
 
 Locators are the most important concept in Playwright.
@@ -130,4 +133,15 @@ await page.locator('#email').fill('user@test.com');
 Use as last resort only.
 
 ```javascript
-await 
+await
+
+
+---
+
+## 🚀 Keep Going
+
+Apply what you learned in this module:
+
+- 🧪 **[Practice Exercises](./practice)** — hands-on tasks to build real skills
+- 🏗️ **[Real Projects](./real-projects)** — real-world automation examples
+
