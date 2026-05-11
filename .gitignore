@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Docusaurus build output
+build/
+.docusaurus/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Playwright output
+playwright-report/
+test-results/
+playwright-tests/playwright-report/
+playwright-tests/test-results/
+playwright-tests/blob-report/
+
+# Playwright generated media
+**/test-results/
+**/playwright-report/
+**/blob-report/
+
+# Coverage
+coverage/
+
+# Cache
+.cache/
